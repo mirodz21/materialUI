@@ -1,9 +1,9 @@
-import { Box, Divider, Stack, Grid } from "@mui/material";
 import React from "react";
+import { Box, Divider, Grid, Paper, Stack } from "@mui/material";
 
-const MuiGrid = () => {
+const MuiPaper = () => {
   return (
-    <>
+    <Paper sx={{ padding: "32px" }} elevation={3}>
       <Stack
         sx={{ border: "1px solid" }}
         direction="row"
@@ -55,8 +55,8 @@ const MuiGrid = () => {
           </Box>
         </Grid>
       </Grid>
-    </>
+    </Paper>
   );
 };
 
-export default MuiGrid;
+export default MuiPaper;
