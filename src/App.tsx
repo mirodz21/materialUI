@@ -1,5 +1,16 @@
 import "./App.css";
-import MuiSkeleton from "./components/MuiSkeleton";
+import { ThemeProvider, colors, createTheme } from "@mui/material";
+
+import MuiTheme from "./components/MuiTheme";
+import MuiResponsiveness from "./components/MuiResponsiveness";
+// import MuiResponsiveness from "./components/MuiResponsiveness";
+// import MuiMasonry from "./components/MuiMasonry";
+// import MuiTimeline from "./components/MuiTimeline";
+// import MuiTabs from "./components/MuiTabs";
+// import { LocalizationProvider } from "@mui/lab";
+// import AdaptorDateFns from "@mui/lab/AdapterDateFns";
+// import MuiLoadingButton from "./components/MuiLoadingButton";
+// import MuiSkeleton from "./components/MuiSkeleton";
 // import MuiProgress from "./components/MuiProgress";
 // import MuiDialoge from "./components/MuiDialoge";
 // import MuiSnackbar from "./components/MuiSnackbar";
@@ -15,7 +26,6 @@ import MuiSkeleton from "./components/MuiSkeleton";
 // import MuiBreadCrumbs from "./components/MuiBreadCrumbs";
 // import MuiDrawer from "./components/MuiDrawer";
 // import MuiMenu from "./components/MuiMenu";
-
 // import MuiLink from "./components/MuiLink";
 // import MuiNavBar from "./components/MuiNavBar";
 // import MuiImageList from "./components/MuiImageList";
@@ -35,44 +45,64 @@ import MuiSkeleton from "./components/MuiSkeleton";
 // import MuiTypography from "./components/MuiTypography";
 // import MuiTextField from "./components/MuiTextField";
 
+const theme = createTheme({
+  status: {
+    danger: "#e53e3e",
+  },
+  palette: {
+    secondary: {
+      main: colors.orange[500],
+    },
+  },
+});
 function App() {
   return (
-    <div className="App">
-      {/* <MuiButton /> */}
-      {/* <MuiTypography /> */}
-      {/* <MuiTextField /> */}
-      {/* <MuiSelect /> */}
-      {/* <MuiRadio /> */}
-      {/* <MuiCheckbox /> */}
-      {/* <MuiSwitch /> */}
-      {/* <MuiRating /> */}
-      {/* <MuiAutoComplete /> */}
-      {/* <MuiBox /> */}
-      {/* <MuiStack /> */}
-      {/* <MuiGrid /> */}
-      {/* <MuiPaper /> */}
-      {/* <MuiCard /> */}
-      {/* <MuiAccordion /> */}
-      {/* <MuiImageList /> */}
-      {/* <MuiNavBar /> */}
-      {/* <MuiLink /> */}
-      {/* <MuiMenu /> */}
-      {/* <MuiBreadCrumbs /> */}
-      {/* <MuiDrawer /> */}
-      {/* <MuiSpeedDial /> */}
-      {/* <MuiBottomNav /> */}
-      {/* <MuiAvatar /> */}
-      {/* <MuiBadge /> */}
-      {/* <MuiList /> */}
-      {/* <MuiChip /> */}
-      {/* <MuiToolTip /> */}
-      {/* <MuiTable /> */}
-      {/* <MuiAlert /> */}
-      {/* <MuiSnackbar /> */}
-      {/* <MuiDialoge /> */}
-      {/* <MuiProgress /> */}
-      <MuiSkeleton />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        {/* <LocalizationProvider dateAdapter={AdaptorDateFns}> */}
+        {/* <MuiButton /> */}
+        {/* <MuiTypography /> */}
+        {/* <MuiTextField /> */}
+        {/* <MuiSelect /> */}
+        {/* <MuiRadio /> */}
+        {/* <MuiCheckbox /> */}
+        {/* <MuiSwitch /> */}
+        {/* <MuiRating /> */}
+        {/* <MuiAutoComplete /> */}
+        {/* <MuiBox /> */}
+        {/* <MuiStack /> */}
+        {/* <MuiGrid /> */}
+        {/* <MuiPaper /> */}
+        {/* <MuiCard /> */}
+        {/* <MuiAccordion /> */}
+        {/* <MuiImageList /> */}
+        {/* <MuiNavBar /> */}
+        {/* <MuiLink /> */}
+        {/* <MuiMenu /> */}
+        {/* <MuiBreadCrumbs /> */}
+        {/* <MuiDrawer /> */}
+        {/* <MuiSpeedDial /> */}
+        {/* <MuiBottomNav /> */}
+        {/* <MuiAvatar /> */}
+        {/* <MuiBadge /> */}
+        {/* <MuiList /> */}
+        {/* <MuiChip /> */}
+        {/* <MuiToolTip /> */}
+        {/* <MuiTable /> */}
+        {/* <MuiAlert /> */}
+        {/* <MuiSnackbar /> */}
+        {/* <MuiDialoge /> */}
+        {/* <MuiProgress /> */}
+        {/* <MuiSkeleton /> */}
+        {/* <MuiLoadingButton /> */}
+        {/* </LocalizationProvider> */}
+        {/* <MuiTabs /> */}
+        {/* <MuiTimeline /> */}
+        {/* <MuiMasonry /> */}
+        <MuiResponsiveness />
+        <MuiTheme />
+      </div>
+    </ThemeProvider>
   );
 }
 
